@@ -5,6 +5,36 @@
 </head>
 <body>
     <h1>Hello, World!</h1>
-    <p>My name is Sapiro!</p>
+    <p>Welcome to my GitHub Pages site!</p>
+
+    <!-- Placeholder for the greeting and time message -->
+    <div id="greeting"></div>
+    <div id="current-time"></div>
+
+    <script>
+        // Get the current time
+        const now = new Date();
+        const currentHour = now.getHours();
+        const currentMinute = now.getMinutes();
+        const greetingDiv = document.getElementById('greeting');
+        const timeDiv = document.getElementById('current-time');
+
+        // Use if/else based on the time of day
+        if (currentHour < 12) {
+            greetingDiv.innerHTML = "<p>Good morning!</p>";
+        } else if (currentHour < 18) {
+            greetingDiv.innerHTML = "<p>Good afternoon!</p>";
+        } else {
+            greetingDiv.innerHTML = "<p>Good evening!</p>";
+        }
+
+        // Format the time with leading zero if needed
+        const formattedHour = currentHour < 10 ? '0' + currentHour : currentHour;
+        const formattedMinute = currentMinute < 10 ? '0' + currentMinute : currentMinute;
+        const formattedTime = `${formattedHour}:${formattedMinute}`;
+
+        // Display the current time
+        timeDiv.innerHTML = `<p>The current time is: ${formattedTime}</p>`;
+    </script>
 </body>
 </html>
