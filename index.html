@@ -14,18 +14,41 @@
     </script>
 </head>
 <body>
-
-
-    <table border="1" style="width: 50%; table-layout: fixed; text-align: center; vertical-align: middle;">
-        <caption style="caption-side: top; font-weight: bold; font-style: italic; font-size: 34px;  padding: 10px;">Moja Porodica</caption>
-        <tr style="height: 50px;">
+    <style>
+        table {
+          width: 100%;
+          table-layout: fixed;
+          border-collapse: collapse;
+        }
+      
+        td, th {
+          padding: 10px;
+          text-align: center;
+          vertical-align: middle;
+          border: 1px solid #ddd;
+          word-wrap: break-word;
+          font-size: clamp(12px, 2vw, 16px); /* Prilagođava veličinu teksta */
+        }
+      
+        caption {
+          caption-side: top;
+          font-weight: bold;
+          font-style: italic;
+          font-size: clamp(18px, 3vw, 24px); /* Prilagođava veličinu teksta u naslovu */
+          color: rgb(45, 26, 190); /* Postavlja boju naslova na zeleno */
+          padding: 10px;
+        }
+      </style>
+    <table >
+        <caption >Moja Porodica</caption>
+        <tr >
           <td>MAMA</td>
           <td>TATA</td>
           <td>SESTRA</td>
           <td>BRAT</td>
           <td>LJUBIMAC</td>
         </tr>
-        <tr style="height: 50px;">
+        <tr >
           <td>Marina</td>
           <td>Damnjan</td>
           <td>Darija</td>
