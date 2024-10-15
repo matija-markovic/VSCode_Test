@@ -14,6 +14,19 @@
     </script>
 </head>
 <body>
+
+<!-- Polje za unos -->
+<label for="unosTeksta">UNESI:</label>
+<input type="text" id="unosTeksta" placeholder="Unesite neki tekst" />
+
+<!-- Dugme za prikaz teksta -->
+<button onclick="prikaziTekst()">Prikaži sta smo uneli</button>
+
+<!-- Polje za prikaz unetog teksta -->
+<p>Uneli ste: <span id="prikazTeksta"></span></p>
+
+<hr style="margin-top: 20px; margin-bottom: 20px; border: 1px solid #000;" />
+
     <style>
         table {
           width: 100%;
@@ -38,6 +51,10 @@
           color: rgb(45, 26, 190); /* Postavlja boju naslova na zeleno */
           padding: 10px;
         }
+        img {
+            width: 50%; /* Postavlja sliku da zauzima celu širinu ćelije */
+            height: auto; /* Prilagođava visinu slike automatski */
+        }
       </style>
     <table >
         <caption >Moja Porodica</caption>
@@ -55,21 +72,16 @@
           <td>Matija</td>
           <td>Noa</td>
         </tr>
+        <tr>
+            <td colspan="5">
+                <img src="https://res.cloudinary.com/demo/image/upload/e_replace_color:lightblue:17/sample" alt="Sunce" />
+              </td>
+          </tr>
       </table>
       
 <hr style="margin-top: 20px; margin-bottom: 20px; border: 1px solid #000;" />
 
-<!-- Polje za unos -->
-    <label for="unosTeksta">UNESI:</label>
-    <input type="text" id="unosTeksta" placeholder="Unesite neki tekst" />
 
-    <!-- Dugme za prikaz teksta -->
-    <button onclick="prikaziTekst()">Prikaži</button>
-
-    <!-- Polje za prikaz unetog teksta -->
-    <p>Uneli ste: <span id="prikazTeksta"></span></p>
-
-<hr style="margin-top: 20px; margin-bottom: 20px; border: 1px solid #000;" />
 
 
       <h2>First ever web page<h2></h2>
