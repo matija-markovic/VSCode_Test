@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Prva stranica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unos i Prikaz Teksta</title>
+    <script>
+        function prikaziTekst() {
+            // Uzimamo vrednost iz polja za unos
+            var unetiTekst = document.getElementById("unosTeksta").value;
+            // Prikazujemo vrednost u polju za prikaz
+            document.getElementById("prikazTeksta").innerText = unetiTekst;
+        }
+    </script>
 </head>
 <body>
-    <h2>First ever web page<h2></h2>
-<h1>sutra mi je rodjendan.Punim 10 godina.<h1>
-<h1>dobro jutro<h1>
-<h1>dobar dan<h1></h1>
-  <h1>dobro vece<h1> 
-    <h2>Cao,ja sam Matija.</h2>
-    <p>Sapiro je car carski.</p>
-<p>volim svoju porodicu.
-    <p>sutra mi je rodjendan.<p></p>
-<p>imam i kucu zove se noa.<p>
-<P>moja porodica se preziva Markovic.<P>
-<h1>MAMA<h1> <h1>TATA<h1> <h1>SESTRA<h1>
-<p>Marina<p>  <p>Damnjan<p> <p>Darija</p>
-    <!-- Placeholder for the greeting and time message -->
-    <div id="greeting"></div>
-    <div id="current-time"></div>
 
-    <script>
-        // Get the current time
-        const now = new Date();
-        const currentHour = now.getHours();
-        const currentMinute = now.getMinutes();
-        const greetingDiv = document.getElementById('greeting');
-        const timeDiv = document.getElementById('current-time');
 
-        // Use if/else based on the time of day
-        if (currentHour < 12) {
-            greetingDiv.innerHTML = "<p>Dobro jutro!</p>";
-        } else if (currentHour < 18) {
-            greetingDiv.innerHTML = "<p>Dobro vece!</p>";
-        } else {
-            greetingDiv.innerHTML = "<p>Moram da menjam tekst. Dobro vece.</p>";
-        }
+    <table border="1" style="width: 50%; table-layout: fixed; text-align: center; vertical-align: middle;">
+        <caption style="caption-side: top; font-weight: bold; font-style: italic; font-size: 34px;  padding: 10px;">Moja Porodica</caption>
+        <tr style="height: 50px;">
+          <td>MAMA</td>
+          <td>TATA</td>
+          <td>SESTRA</td>
+          <td>BRAT</td>
+          <td>LJUBIMAC</td>
+        </tr>
+        <tr style="height: 50px;">
+          <td>Marina</td>
+          <td>Damnjan</td>
+          <td>Darija</td>
+          <td>Matija</td>
+          <td>Noa</td>
+        </tr>
+      </table>
+      
+<hr style="margin-top: 20px; margin-bottom: 20px; border: 1px solid #000;" />
 
-        // Format the time with leading zero if needed
-        const formattedHour = currentHour < 10 ? '0' + currentHour : currentHour;
-        const formattedMinute = currentMinute < 10 ? '0' + currentMinute : currentMinute;
-        const formattedTime = `${formattedHour}:${formattedMinute}`;
+<!-- Polje za unos -->
+<label for="unosTeksta">UNESI:</label>
+<input type="text" id="unosTeksta" placeholder="Unesite neki tekst" />
 
-        // Display the current time
-        timeDiv.innerHTML = `<p>The current time is: ${formattedTime}</p>`;
-    </script>
+<!-- Dugme za prikaz teksta -->
+<button onclick="prikaziTekst()">Prikaži</button>
+
+<!-- Polje za prikaz unetog teksta -->
+<p>Uneli ste: <span id="prikazTeksta"></span></p>
+
+<hr style="margin-top: 20px; margin-bottom: 20px; border: 1px solid #000;" />
+
+
+      <h2>First ever web page<h2></h2>
+      <h1>sutra mi je rodjendan.Punim 10 godina.<h1>
+      <h1>dobro jutro<h1>
+      <h1>dobar dan<h1></h1>
+        <h1>dobro vece<h1> 
+          <h2>Cao,ja sam Matija.</h2>
+          <p>Sapiro je car carski.</p>
+      <p>volim svoju porodicu.
+          <p>sutra mi je rodjendan.<p></p>
+      <p>imam i kucu zove se noa.<p>
+      <P>moja porodica se preziva Markovic.<P>
+    
 </body>
 </html>
